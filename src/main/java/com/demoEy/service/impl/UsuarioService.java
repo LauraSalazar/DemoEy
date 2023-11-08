@@ -70,7 +70,7 @@ public class UsuarioService implements IUsuarioService {
             responseBody.setLast_Login(LocalDate.now().toString());
             usuario.setEmail(usuarioBody.getEmail());
             usuario.setNombre(usuarioBody.getName());
-            usuario.setToken(jwtGenerator.generataToken(usuarioBody.getName(), usuarioBody.getPassword()));
+            usuario.setToken(jwtGenerator.generateToken(usuarioBody.getName(), usuarioBody.getPassword()));
             responseBody.setToken(usuario.getToken());
             usuariosDao.save(usuario);
 

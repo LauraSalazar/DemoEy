@@ -12,7 +12,7 @@ public class JWTGenerator {
                 .compact(); // Construye el JWT
     }
 
-    public String generataToken(String usuario, String secret) {
+    public String generateToken(String usuario, String secret) {
         String jwt = generateJWT(usuario, secret);
         System.out.println("JWT generado: " + jwt);
         return jwt;
